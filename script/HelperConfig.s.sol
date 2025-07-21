@@ -25,17 +25,17 @@ contract HelperConfig is Script {
         }
     }
 
-    function getSepoliaEthConfig() public pure returns(NetworkConfig memory) {
+    function getSepoliaEthConfig() public pure returns (NetworkConfig memory) {
         NetworkConfig memory sepoliaConfig = NetworkConfig({priceFeed: 0x694AA1769357215DE4FAC081bf1f309aDC325306});
         return sepoliaConfig;
     }
 
-    function getMainnetEthConfig() public pure returns(NetworkConfig memory) {
+    function getMainnetEthConfig() public pure returns (NetworkConfig memory) {
         NetworkConfig memory ethConfig = NetworkConfig({priceFeed: 0x5147eA642CAEF7BD9c1265AadcA78f997AbB9649});
         return ethConfig;
     }
 
-    function getOrCreateAnvilEthConfig() public returns(NetworkConfig memory) {
+    function getOrCreateAnvilEthConfig() public returns (NetworkConfig memory) {
         if (activeNetworkConfig.priceFeed != address(0)) {
             return activeNetworkConfig;
         }

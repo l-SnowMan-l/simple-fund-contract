@@ -28,7 +28,7 @@ contract FundMe {
     }
 
     function getVersion() public view returns (uint256) {
-            return s_priceFeed.version();
+        return s_priceFeed.version();
     }
 
     modifier onlyOwner() {
@@ -56,15 +56,15 @@ contract FundMe {
         fund();
     }
 
-    function getAddressToAmountetFunded(address fundingAddress) external view returns(uint256) {
+    function getAddressToAmountetFunded(address fundingAddress) external view returns (uint256) {
         return s_addressToAmountFunded[fundingAddress];
     }
 
-    function getFunder(uint256 index) external view returns(address) {
+    function getFunder(uint256 index) external view returns (address) {
         return s_funders[index];
     }
 
-    function getOwner() external view returns(address) {
+    function getOwner() external view returns (address) {
         return i_owner;
-    }    
+    }
 }
